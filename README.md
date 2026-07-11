@@ -1,5 +1,7 @@
 # Rebuilding the BT APK
 
+*(Disclaimer: The source code in this repository was reverse-engineered and decompiled from the original BT application APK using `apktool` and `jadx`.)*
+
 To modify and rebuild the `BT` app, you will work with the `smali` code instead of the Java code. Here is your step-by-step guide for making changes and producing a working APK that you can install on your TV.
 
 ## 1. Modifying the Code
