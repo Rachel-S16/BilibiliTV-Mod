@@ -39323,6 +39323,8 @@
     .line 58
     invoke-virtual {p0}, Lcom/chinasoul/bt/NativePlayerActivity;->Q1()V
 
+    invoke-virtual {p0}, Lcom/chinasoul/bt/NativePlayerActivity;->S0()V
+
     .line 59
     .line 60
     .line 61
