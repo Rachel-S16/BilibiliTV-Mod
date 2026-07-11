@@ -157,10 +157,10 @@
     const p3, 0x2bf20
     const p4, 0x2bf20
     const p5, 0x2bf20
-    const p6, 0x4e20
-    const p7, 0x4e20
-    const p8, 0x9c40
-    const p9, 0x9c40
+    const p6, 0x9c4
+    const p7, 0x9c4
+    const p8, 0x1388
+    const p9, 0x1388
 
     .line 1
     move-object/from16 v0, p0
