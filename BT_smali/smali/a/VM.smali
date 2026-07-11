@@ -4184,7 +4184,7 @@
     .line 16
     :cond_1
     :goto_0
-    const-string v0, "chinasoul/BT"
+    const-string v0, "Xiaobing-S/BilibiliTV-Mod"
 
     .line 17
     .line 18
