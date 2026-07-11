@@ -1,0 +1,105 @@
+.class public final Lj$/util/stream/Q3;
+.super Lj$/util/stream/Z;
+.source "SourceFile"
+
+# interfaces
+.implements Lj$/util/stream/X3;
+
+
+# virtual methods
+.method public final M0(Lj$/util/stream/y1;Lj$/util/Spliterator;Ljava/util/function/IntFunction;)Lj$/util/stream/J0;
+    .locals 1
+
+    .line 431
+    new-instance v0, Lj$/util/stream/Z3;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lj$/util/stream/Z3;-><init>(Lj$/util/stream/b;Lj$/util/stream/y1;Lj$/util/Spliterator;Ljava/util/function/IntFunction;)V
+
+    .line 432
+    invoke-virtual {v0}, Ljava/util/concurrent/CountedCompleter;->invoke()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lj$/util/stream/J0;
+
+    return-object p1
+.end method
+
+.method public final N0(Lj$/util/stream/b;Lj$/util/Spliterator;)Lj$/util/Spliterator;
+    .locals 2
+
+    .line 417
+    sget-object v0, Lj$/util/stream/c3;->ORDERED:Lj$/util/stream/c3;
+
+    .line 509
+    iget v1, p1, Lj$/util/stream/b;->m:I
+
+    .line 417
+    invoke-virtual {v0, v1}, Lj$/util/stream/c3;->d(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 418
+    new-instance v0, Lj$/util/stream/b2;
+
+    const/4 v1, 0x7
+
+    .line 0
+    invoke-direct {v0, v1}, Lj$/util/stream/b2;-><init>(I)V
+
+    .line 418
+    invoke-virtual {p0, p1, p2, v0}, Lj$/util/stream/Q3;->M0(Lj$/util/stream/y1;Lj$/util/Spliterator;Ljava/util/function/IntFunction;)Lj$/util/stream/J0;
+
+    move-result-object p1
+
+    .line 419
+    invoke-interface {p1}, Lj$/util/stream/J0;->spliterator()Lj$/util/Spliterator;
+
+    move-result-object p1
+
+    return-object p1
+
+    .line 422
+    :cond_0
+    new-instance v0, Lj$/util/stream/c4;
+
+    .line 423
+    invoke-virtual {p1, p2}, Lj$/util/stream/b;->G0(Lj$/util/Spliterator;)Lj$/util/Spliterator;
+
+    move-result-object p1
+
+    check-cast p1, Lj$/util/W;
+
+    const/4 p2, 0x0
+
+    .line 828
+    invoke-direct {v0, p1, p2}, Lj$/util/stream/c4;-><init>(Lj$/util/Spliterator;I)V
+
+    return-object v0
+.end method
+
+.method public final P0(ILj$/util/stream/p2;)Lj$/util/stream/p2;
+    .locals 1
+
+    .line 469
+    new-instance p1, Lj$/util/stream/P3;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, p0, p2, v0}, Lj$/util/stream/P3;-><init>(Lj$/util/stream/Q3;Lj$/util/stream/p2;Z)V
+
+    return-object p1
+.end method
+
+.method public final i(Lj$/util/stream/B0;Z)Lj$/util/stream/Y3;
+    .locals 1
+
+    .line 469
+    new-instance v0, Lj$/util/stream/P3;
+
+    invoke-direct {v0, p0, p1, p2}, Lj$/util/stream/P3;-><init>(Lj$/util/stream/Q3;Lj$/util/stream/p2;Z)V
+
+    return-object v0
+.end method

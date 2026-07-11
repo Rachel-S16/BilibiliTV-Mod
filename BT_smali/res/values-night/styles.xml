@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="tvRecyclerViewStyle">@style/TVRecyclerViewStyle</item>
+    </style>
+    <style name="NativePlayerTheme" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="tvRecyclerViewStyle">@style/TVRecyclerViewStyle</item>
+    </style>
+</resources>
