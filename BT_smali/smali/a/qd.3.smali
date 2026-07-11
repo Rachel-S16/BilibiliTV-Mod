@@ -153,12 +153,12 @@
 .method public constructor <init>(La/rc;IIIIIIIIIZZLjava/util/Map;)V
     .locals 16
 
-    const p2, 0x493e0
-    const p3, 0x493e0
-    const p4, 0x493e0
+    const p2, 0xc350
+    const p3, 0xc350
+    const p4, 0xc350
     const p5, 0x493e0
-    const p6, 0x3e8
-    const p7, 0x3e8
+    const p6, 0x1f4
+    const p7, 0x1f4
     const p8, 0x3e8
     const p9, 0x3e8
 

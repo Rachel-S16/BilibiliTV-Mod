@@ -17,6 +17,8 @@
 
 .field public A0:J
 
+.field public __custom_autoplay_fired:Z
+
 .field public A1:La/Xv;
 
 .field public A2:Z
@@ -39323,8 +39325,6 @@
     .line 58
     invoke-virtual {p0}, Lcom/chinasoul/bt/NativePlayerActivity;->Q1()V
 
-    invoke-virtual {p0}, Lcom/chinasoul/bt/NativePlayerActivity;->S0()V
-
     .line 59
     .line 60
     .line 61
@@ -46272,7 +46272,7 @@
 .end method
 
 .method public final e2()V
-    .locals 11
+    .locals 15
 
     .line 1
     iget-object v0, p0, Lcom/chinasoul/bt/NativePlayerActivity;->i:La/lh;
@@ -46459,6 +46459,39 @@
     .line 81
     .line 82
     :cond_6
+    invoke-virtual {v0}, La/lh;->G()J
+    move-result-wide v8
+    
+    invoke-virtual {v0}, La/lh;->B()J
+    move-result-wide v12
+    
+    const-wide v10, 0x5dc
+    sub-long/2addr v8, v10
+    
+    const-wide v10, 0x1388
+    cmp-long v14, v8, v10
+    if-gtz v14, :cond_autoplay_time_check
+    goto :cond_autoplay_reset
+    
+    :cond_autoplay_time_check
+    cmp-long v14, v12, v8
+    if-ltz v14, :cond_autoplay_reset
+    
+    :cond_autoplay_trigger
+    iget-boolean v14, p0, Lcom/chinasoul/bt/NativePlayerActivity;->__custom_autoplay_fired:Z
+    if-nez v14, :cond_autoplay_skip
+    
+    const/4 v14, 0x1
+    iput-boolean v14, p0, Lcom/chinasoul/bt/NativePlayerActivity;->__custom_autoplay_fired:Z
+    
+    invoke-virtual {p0}, Lcom/chinasoul/bt/NativePlayerActivity;->S0()V
+    goto :cond_autoplay_skip
+
+    :cond_autoplay_reset
+    const/4 v14, 0x0
+    iput-boolean v14, p0, Lcom/chinasoul/bt/NativePlayerActivity;->__custom_autoplay_fired:Z
+    
+    :cond_autoplay_skip
     invoke-virtual {v0}, La/lh;->u()J
 
     .line 83
